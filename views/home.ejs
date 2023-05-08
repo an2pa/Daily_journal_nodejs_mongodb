@@ -1,0 +1,12 @@
+<%- include("partials/header") -%>
+
+<h1><%=bigTitle%></h1>
+    <p>
+        <%=homeParagraph%>
+    </p>
+    <% post.forEach(function(p){ %>
+        <% var url="/posts/"+p.title %>
+        <h3><%= p.title %></h3>
+        <p><%= p.storyHome %><a href="<%=url%>"> Read more</a>  </p>   
+    <% }) %>
+<%- include("partials/footer") -%>
